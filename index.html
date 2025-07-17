@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La biblioteca</title>
+    <meta name="DC.Subject" content="Bibliotecas digitales; Gestión de contenidos; Metadatos; Aplicaciones informáticas; Interfaz web">
+    <meta name="description" content="Portfolio académico para gestionar y guardar libros online con portadas personalizadas. Biblioteca digital creada con HTML, CSS y JavaScript.">
+    <title>Biblioteca digital personalizada | Guarda libros con portada</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,12 +22,35 @@
   gtag('config', 'G-7DQMP6EZ31');
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Biblioteca digital personalizada",
+  "description": "Portfolio académico para guardar libros con portada, autor, género y fecha.",
+  "url": "https://tu-url.github.io",
+  "creator": {
+    "@type": "Person",
+    "name": "Raquel"
+  },
+  "hasPart": [
+    {
+      "@type": "Book",
+      "name": "El jardín secreto",
+      "author": "Frances Hodgson Burnett",
+      "datePublished": "1911",
+      "genre": "Novela"
+    }
+  ]
+}
+</script>
 
 
 
 </head>
 <body>
-    <header>      
+    <header class="header-style">    
+        <h1>Tu biblioteca Digital</h1>  
         <nav class="nav-bar">
             <ul class="menu">
                 <li><a href="#" id="botonAbrirBuscar">Buscar libro</a></li>
@@ -73,7 +98,7 @@
     <main >
         <section class="container">
              <div class="box-titulo">
-                <h2>Crea tu biblioteca personalizada</h2>
+                <h2>Crea tu biblioteca digital personalizada con portadas de libros</h2>
                 <p>Introduce los datos de los libros que deseas guardar</p>
                 </div>
             <form class="formulario">
@@ -111,8 +136,11 @@
         <template id="item_libro">                             
                     
                 <article class="card-libro">
-                    <img src="" >
-                    <div>
+                    <div class="box-img">
+                    <img src="" alt="Portada del libro">
+                    </div>
+                    <div class="info-libro">
+                    <div >
                         <h3>Título</h3>
                         <p id="nombre_libro"></p>
                     </div>
@@ -128,8 +156,8 @@
                         <h3>Género</h3>
                         <p id="genero_libro"></p>
                     </div>
-                    
-                    <div>
+                   </div>     
+                    <div class="botones-card">
                         <button id="editar_libro" class="btn-editar">Editar</button>
                         <button id="eliminar_libro" class="btn-eliminar">Eliminar</button>
                     </div>
